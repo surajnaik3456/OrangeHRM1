@@ -39,8 +39,18 @@ Feature: Test the login functionality of OrangeHRM
     When the user leaves both username and password fields empty
     And click on Login button
     Then the user should get an error message indicating required fields
-
+    
   @Fifth
+  Scenario: Forgot password flow
+  Given user is on login page
+  When user clicks on forgot your password link
+  Then Reset password page is displayed
+  And Enter username in username text field
+  And click on Reset password button
+  Then reset password link is sent via email
+  
+  
+  @sixth
   Scenario Outline: Logout functionality
     Given the user is logged in
     When the user clicks on profile dropdown

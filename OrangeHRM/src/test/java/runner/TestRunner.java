@@ -5,7 +5,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features="src/test/resources/Feature",glue= {"StepDefinitions","Hooks","TestBase"},
-tags= "@login",
+tags= "@Second",
 monochrome = true,
 plugin = {"json:target/cucumber.json"}
 		)
